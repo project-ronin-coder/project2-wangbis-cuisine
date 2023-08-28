@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: "Work Sans", sans-serif;
+  /* font-family: 'Sail', cursive; */
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Ambroise";
+  src: url(/font/Ambroise\ Light\ Regular.otf);
+}
+
+/*----------------------------------NAV BAR---------------------------------*/
+/*----------------------------------HEADER----------------------------------*/
+
+body {
+  background-image: url(/images/asian_cuisine_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------------NAV BAR---------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  position: fixed;
+  height: 10vh;
+  top: 0;
+  z-index: 999;
+}
+
+.nav__container {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.navbar__logo img {
+  height: 10vh;
+  margin-right: -15px;
+}
+
+.navbar__logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__title {
+  color: #5e2f12;
+  font-family: "Sail", cursive;
+  letter-spacing: 0.1rem;
+  font-size: 2.3rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar__list {
+  display: inline-flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar__list__item {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.navbar__item {
+  padding: 0 20px;
+  text-decoration: none;
+  color: #00c8ac;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #5e2f12;
+}
+
+.navbar__item::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  margin-top: 4px;
+  background-color: #5e2f12;
+  transition: all 0.5s;
+}
+
+.navbar__item:hover::after {
+  width: 100%;
+}
+
+.hamburger__btn {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  color: #5e2f12;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+section,
+article {
+  display: none;
+}
+
+.main-about,
+.main-blog,
+.footer__container {
+  display: none;
+}
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------------HEADER----------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 90vh;
+  margin-top: 10vh;
+}
+
+.header-container {
+  background: rgba(0, 0, 0, 0.4);
+  /*0.4*/
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 85vh;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-sub-container1 {
+  margin: 1rem;
+}
+
+.header-address {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.header-sub-container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-sub-container2 h2,
+span {
+  margin: 1rem;
+  font-family: "Ambroise";
+  font-size: 5rem;
+  color: #fff;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-sub-container3 {
+  margin: 1rem;
+}
+
+.header-btn {
+  width: 150px;
+  height: 50px;
+  padding: 0.5rem;
+  border: none;
+  color: #000;
+  background-color: #bd8b55;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 rgb(94, 47, 18);
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  font-family: "Work Sans", sans-serif;
+  outline: none;
+}
+
+.header-btn:hover {
+  box-shadow: inset 150px 0 0 0 rgb(94, 47, 18);
+  cursor: pointer;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------RESPONSIVE DESIGN--------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*----------------------------------FOR PHONE-------------------------------*/
+
+@media screen and (max-width: 425px) {
+  /*----------------------------------NAV BAR---------------------------------*/
+
+  .navbar__logo {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburger__btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*----------------------------------HEADER----------------------------------*/
+
+  .header-sub-container2 {
+    flex-direction: column;
+  }
+
+  .header-sub-container2 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .header-sub-container2 span {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-btn {
+    width: 100px;
+    font-size: 0.8rem;
+  }
+
+  .header-btn:hover {
+    box-shadow: inset 100px 0 0 0 rgb(94, 47, 18);
+  }
+}
+
+/*----------------------------------FOR TABLET------------------------------*/
+
+@media screen and (max-width: 768px) {
+  /*----------------------------------NAV BAR---------------------------------*/
+
+  nav {
+    display: none;
+  }
+
+  .hamburger__btn {
+    display: block;
+  }
+
+  /*----------------------------------HEADER----------------------------------*/
+
+  .header-address {
+    font-size: 0.8rem;
+  }
+
+  .header-sub-container2 h2 {
+    margin: 0.5rem;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .header-sub-container2 span {
+    font-size: 3rem;
+    margin: 0.5rem;
+    padding: 0;
+  }
+}
+
+/*----------------------------------FOR LAPTOP------------------------------*/
+
+@media screen and (max-width: 1440px) {
+  .navbar__title {
+    font-size: 1.8rem;
+  }
+
+  .navbar__item {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 10px;
+  }
+
+  .header-sub-container2 h2,
+  span {
+    font-size: 3rem;
+  }
+}

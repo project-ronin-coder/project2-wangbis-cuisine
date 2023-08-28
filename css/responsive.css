@@ -1,0 +1,118 @@
+/* ======================== */
+/* ===== LAPTOP/TABLET ==== */
+/* ======================== */
+
+@media screen and (max-width: 1080px) {
+  #AboutSection .about_container_card .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ======================== */
+/* ========= MOBILE ======= */
+/* ======================== */
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .toggle_icon,
+  .scroll_down a {
+    font-size: 1.6rem;
+  }
+
+  .header_title .header_text {
+    font-size: 45px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .header_title .header_text span {
+    padding: 0;
+    margin: 0;
+    line-height: 0.5;
+  }
+
+  .header_title .header_subtext {
+    font-size: 24px;
+  }
+
+  .header_overlay .header_logo {
+    height: 45px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .header_overlay .header_logo a {
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .navbar_item {
+    font-size: 1.5rem;
+  }
+
+  .socials_list_item .socials_item {
+    font-size: 1.5rem;
+  }
+
+  .socials_list_item:last-child {
+    position: static;
+  }
+
+  .back_to_top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* ABOUT */
+  #AboutSection .welcome_container_card .container {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome_card_header .welcome_card_main_text {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .welcome_card_header .welcome_card_sub_text {
+    font-size: 46px;
+    letter-spacing: 3px;
+  }
+
+  .welcome_card_header .welcome_card_body_text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .welcome_card_image {
+    height: 300px;
+  }
+
+  #AboutSection .about_container_card .container {
+    grid-template-columns: 1fr;
+  }
+
+  #AboutSubTitle {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 5px;
+  }
+
+  #AboutTitle {
+    font-size: 40px;
+    line-height: 1.3;
+    letter-spacing: 5px;
+  }
+}
