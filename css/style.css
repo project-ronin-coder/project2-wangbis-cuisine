@@ -41,12 +41,6 @@ body {
   font-size: 16px;
   color: var(--fc-light);
 
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/asian_cuisine_bg.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-
   display: grid;
   grid-template-areas:
     "header"
@@ -71,6 +65,12 @@ a {
 }
 #AboutSection {
   grid-area: about;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/asian_cuisine_bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 #MenuSection {
   grid-area: menu;
