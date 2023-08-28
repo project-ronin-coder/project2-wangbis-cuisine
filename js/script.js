@@ -2,11 +2,13 @@ const toggle = document.querySelector(".toggle");
 const toggle_icon = document.querySelector(".toggle_icon");
 const navigation = document.querySelector(".header_overlay");
 const back_to_top = document.querySelector(".back_to_top");
+const body = document.querySelector("body");
 
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("active");
   toggle_icon.classList.toggle("fa-xmark");
   navigation.classList.toggle("active");
+  body.classList.toggle("lock-scroll");
 });
 
 window.onscroll = function () {
