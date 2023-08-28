@@ -12,6 +12,12 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Wangbi's Cuisine</title>
+  <script>
+    var video = document.getElementsById("HeaderVideoBackground");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("muted", "");
+    video.play();
+  </script>
 </head>
 
 <body>
@@ -23,7 +29,7 @@
       Video Credits | cottonbro studio 
       @https://www.pexels.com/video/a-chef-plating-a-serving-of-salmon-sahimi-3338747/ 
     -->
-    <video src="./assets/videos/header_2.mp4" muted loop autoplay></video>
+    <video id="HeaderVideoBackground" src="./assets/videos/header_2.mp4" playsinline muted loop autoplay></video>
     <div class="toggle ">
       <i class="toggle_icon fa-solid fa-bars"></i>
     </div>
