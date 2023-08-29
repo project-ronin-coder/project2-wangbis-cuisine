@@ -51,9 +51,10 @@ body {
     "about"
     "menu"
     "location"
-    "contact";
+    "contact"
+    "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh auto auto 1fr 70px;
+  grid-template-rows: 100vh auto auto 1fr auto auto;
 }
 
 li {
@@ -84,14 +85,25 @@ p {
 }
 #MenuSection {
   grid-area: menu;
-
   background: var(--primary-accent-100);
 }
+/* Photo by Meo Fernando: https://www.pexels.com/photo/aerial-photo-of-cars-on-road-during-night-3214989/ */
 #LocationSection {
   grid-area: location;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/location_bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 #ContactSection {
   grid-area: contact;
+  background: var(--primary-accent-100);
+}
+
+#FooterSection {
+  grid-area: footer;
+  background-color: var(--primary-accent-900);
 }
 
 .container {
@@ -440,7 +452,7 @@ p {
 }
 
 #AboutSection .welcome_container_card .container {
-  padding: 50px 20px;
+  padding: 40px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -502,16 +514,15 @@ p {
   font-family: var(--ff-sans-serif);
   font-size: 30px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 5px;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 #AboutTitle {
   font-family: var(--ff-serif);
   font-size: 60px;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 5px;
   color: var(--primary-accent-100);
   text-align: center;
@@ -522,7 +533,7 @@ p {
 }
 
 #AboutSection .about_container_card .container {
-  padding: 20px;
+  padding: 40px 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -587,11 +598,14 @@ p {
   color: var(--primary-accent-900);
 }
 
+#MenuSection .container {
+  padding: 40px 0;
+}
+
 /* MENU TITLE */
 
-.container .menu_title_container {
-  padding: 50px 0;
-  min-height: 300px;
+#MenuSection .container .menu_title_container {
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -603,17 +617,16 @@ p {
   font-family: var(--ff-sans-serif);
   font-size: 30px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 5px;
   color: var(--fc-dark);
   text-align: center;
-  margin-bottom: 10px;
 }
 
 #MenuTitle {
   font-family: var(--ff-serif);
   font-size: 60px;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 5px;
   color: var(--primary-accent-900);
   text-align: center;
@@ -692,7 +705,7 @@ p {
   column-gap: 20px;
 }
 .menu_list_image {
-  height: 130px;
+  height: 150px;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
@@ -773,4 +786,288 @@ p {
 .menu_list:nth-of-type(8) {
   grid-column: 2/3;
   grid-row: 1/2;
+}
+
+/* 
+=============================================================
+========================= LOCATION  =========================
+=============================================================
+*/
+
+#LocationSection .container {
+  padding: 40px 20px;
+}
+
+#LocationSection .container .location_title_container {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#LocateSubTitle {
+  font-family: var(--ff-sans-serif);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: var(--fc-light);
+  text-align: center;
+}
+#LocateTitle {
+  font-family: var(--ff-serif);
+  font-size: 60px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: var(--primary-accent-200);
+  text-align: center;
+}
+#LocateAddress {
+  font-family: var(--ff-paragraph);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 3;
+  color: var(--fc-light);
+  text-align: center;
+}
+
+.location_map_container {
+  height: 500px;
+  padding: 0 50px;
+}
+
+#RestaurantLocation {
+  height: 100%;
+  width: 100%;
+  border: 4px solid var(--primary-accent-400);
+  border-radius: 5px;
+}
+
+/* 
+=============================================================
+========================= CONTACT  ==========================
+=============================================================
+*/
+
+#ContactSection .container {
+  padding: 20px 20px 40px;
+}
+
+#ContactSection .container .contact_title_container {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#ContactSubtitle {
+  font-family: var(--ff-sans-serif);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: var(--fc-dark);
+  text-align: center;
+}
+#ContactTitle {
+  font-family: var(--ff-serif);
+  font-size: 60px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: var(--primary-accent-900);
+  text-align: center;
+}
+
+/* CONTACT FORM */
+
+.message_title {
+  padding: 0 0 20px;
+  font-family: var(--ff-paragraph);
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  color: var(--fc-dark);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.message_form label {
+  display: block;
+}
+
+.message_form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.input_group label,
+.textarea_group label {
+  font-family: var(--ff-sans-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--primary-accent-900);
+}
+
+.input_group input,
+.textarea_group textarea {
+  font-family: var(--ff-sans-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-accent-900);
+}
+
+.input_group input:focus,
+.textarea_group textarea:focus {
+  outline: none;
+  border: 2px solid var(--primary-accent-600);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.textarea_group {
+  grid-column: 1/4;
+  grid-row: 2;
+}
+
+.submit_container {
+  grid-column: 1/4;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit_container .button {
+  background-color: var(--primary-accent-400);
+  cursor: pointer;
+}
+
+.submit_container .button:hover span {
+  transition: all 0.2s ease-in;
+  color: var(--fc-light);
+}
+
+.submit_container .button span {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--ff-sans-serif);
+  letter-spacing: 3px;
+  color: var(--fc-dark);
+}
+
+/* CONTACT INFORMATION */
+
+.contact_information_container {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact_information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--primary-accent-900);
+}
+
+.contact_information h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact_information i {
+  margin-right: 10px;
+}
+
+.contact_information p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* 
+=============================================================
+========================= FOOTER  ===========================
+=============================================================
+*/
+#FooterSection .container {
+  padding: 50px 20px 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+.footer_logo h1 {
+  font-family: var(--ff-serif);
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  color: var(--fc-light);
+}
+.footer_socials_list {
+  display: flex;
+  align-items: center;
+}
+.footer_socials_list_item {
+  padding: 10px 20px;
+}
+.footer_socials_item {
+  font-size: 1.5rem;
+  color: var(--primary-accent-100);
+}
+
+.footer_socials_item:hover {
+  color: var(--primary-accent-400);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_nav h4,
+.credits h4 {
+  font-family: var(--ff-sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.footer_nav_list_item,
+.credits_nav_list_item {
+  padding: 5px 0;
+}
+
+.footer_nav_item,
+.credits_nav_item {
+  font-size: 1rem;
+  color: var(--primary-accent-100);
+}
+
+.footer_nav_item:hover,
+.credits_nav_item:hover {
+  color: var(--primary-accent-400);
+  transition: all 0.3s ease-in-out;
+}
+
+.copyright {
+  grid-column: 1/4;
 }

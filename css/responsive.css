@@ -112,14 +112,18 @@
   }
 
   #AboutSubTitle,
-  #MenuSubTitle {
-    font-size: 24px;
+  #MenuSubTitle,
+  #LocateSubTitle,
+  #ContactSubtitle {
+    font-size: 20px;
     line-height: 1.5;
     letter-spacing: 5px;
   }
 
   #AboutTitle,
-  #MenuTitle {
+  #MenuTitle,
+  #LocateTitle,
+  #ContactTitle {
     font-size: 30px;
     line-height: 1.5;
     letter-spacing: 5px;
@@ -141,7 +145,7 @@
 
   .menu_feature {
     grid-template-columns: 1fr;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
 
   .menu_feature_image {
@@ -167,7 +171,7 @@
   /* MENU LIST */
 
   .menu_list_container {
-    padding: 20px 0;
+    padding: 20px 10px;
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -228,5 +232,115 @@
   .menu_list:nth-of-type(8) {
     grid-column: 1;
     grid-row: 2;
+  }
+
+  /* 
+  =============================================================
+  ========================= LOCATION  =========================
+  =============================================================
+  */
+
+  #LocationSection .container {
+    padding: 40px 10px;
+  }
+
+  #LocateAddress {
+    font-size: 16px;
+  }
+
+  #LocationSection .container .location_title_container {
+    min-height: 200px;
+  }
+
+  .location_map_container {
+    height: 300px;
+    padding: 0;
+  }
+
+  /* 
+  =============================================================
+  ========================= CONTACT  ==========================
+  =============================================================
+  */
+
+  #ContactSection .container {
+    padding: 20px 10px 40px;
+  }
+
+  #ContactSection .container .contact_title_container {
+    min-height: 200px;
+  }
+
+  .message_title {
+    font-size: 20px;
+  }
+
+  .message_form {
+    grid-template-columns: 1fr;
+  }
+
+  .textarea_group {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .submit_container {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .input_group label,
+  .textarea_group label {
+    font-size: 0.9rem;
+  }
+
+  .input_group input,
+  .textarea_group textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit_container .button span {
+    font-size: 0.9rem;
+  }
+
+  .contact_information_container {
+    padding: 40px 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .contact_information h4 {
+    font-size: 18px;
+  }
+
+  .contact_information p {
+    font-size: 0.9rem;
+  }
+
+  /* 
+  =============================================================
+  ========================= FOOTER  ===========================
+  =============================================================
+  */
+
+  #FooterSection .container {
+    padding: 50px 10px 10px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer_logo h1 {
+    font-size: 24px;
+  }
+
+  .footer_socials_list_item {
+    padding-left: 0;
+  }
+
+  .footer_socials_item {
+    font-size: 1.3rem;
+  }
+
+  .copyright {
+    grid-column: 1;
   }
 }
