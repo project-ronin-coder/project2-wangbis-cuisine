@@ -1,12 +1,14 @@
-/* =============================*/
-/* ====== PREREQUISITES  =======*/
-/* =============================*/
+/* 
+=============================================================
+====================== PREREQUISITES  =======================
+=============================================================
+*/
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --ff-sans-serif: "Poppins", sans-serif;
   --ff-serif: "Playfair Display", serif;
+  --ff-paragraph: "Montserrat", sans-serif;
 
   --fc-light: #ede0d4;
   --fc-dark: #0a0908;
@@ -20,9 +22,11 @@
   --primary-accent-900: #5e2f12;
 }
 
-/* =============================*/
-/* ========== GLOBAL  ==========*/
-/* =============================*/
+/* 
+=============================================================
+========================== GLOBAL  ==========================
+=============================================================
+*/
 
 * {
   margin: 0;
@@ -58,6 +62,12 @@ li {
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-family: var(--ff-paragraph);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 #HeaderSection {
@@ -153,9 +163,11 @@ a {
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
-/* =============================*/
-/* ========== HEADER  ==========*/
-/* =============================*/
+/* 
+=============================================================
+========================== HEADER  ==========================
+=============================================================
+*/
 
 #HeaderSection {
   position: relative;
@@ -416,9 +428,11 @@ a {
   color: var(--fc-light);
 }
 
-/* =============================*/
-/* =========== ABOUT  ==========*/
-/* =============================*/
+/* 
+=============================================================
+=========================== ABOUT  ==========================
+=============================================================
+*/
 
 #AboutSection .welcome_container_card {
   background: var(--primary-accent-100);
@@ -487,6 +501,7 @@ a {
 #AboutSubTitle {
   font-family: var(--ff-sans-serif);
   font-size: 30px;
+  font-weight: 600;
   line-height: 1.6;
   letter-spacing: 5px;
   text-align: center;
@@ -515,7 +530,6 @@ a {
 
 .about_card {
   height: 100%;
-  /* border: 2px solid var(--primary-accent-900); */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -563,11 +577,17 @@ a {
   margin-left: 10px;
 }
 
-/* MENU */
+/* 
+=============================================================
+=========================== MENU  ===========================
+=============================================================
+*/
 
 #MenuSection {
   color: var(--primary-accent-900);
 }
+
+/* MENU TITLE */
 
 .container .menu_title_container {
   padding: 50px 0;
@@ -582,6 +602,7 @@ a {
 #MenuSubTitle {
   font-family: var(--ff-sans-serif);
   font-size: 30px;
+  font-weight: 600;
   line-height: 1.6;
   letter-spacing: 5px;
   color: var(--fc-dark);
@@ -597,6 +618,66 @@ a {
   color: var(--primary-accent-900);
   text-align: center;
 }
+
+/* MENU FEATURE */
+
+.menu_feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  column-gap: 20px;
+}
+
+.menu_feature_image {
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.feature_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.feature_img:hover {
+  transform: scale(1.1);
+}
+
+.menu_feature_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu_feature_description {
+  height: 100%;
+  width: 100%;
+}
+
+.menu_feature_description h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.menu_feature_description h3 {
+  font-size: 32px;
+}
+.menu_feature_description p {
+  font-size: 18px;
+}
+
+.menu_feature_price {
+  width: 100%;
+}
+.menu_feature_price p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* MENU LIST */
 
 .menu_list_container {
   padding: 20px;
@@ -638,11 +719,14 @@ a {
 }
 .menu_description h5 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .menu_price {
   width: 100%;
+}
+.menu_price p {
   font-size: 24px;
+  font-weight: 400;
 }
 
 .menu_list_wide {
@@ -655,6 +739,8 @@ a {
 .menu_list_wide .button i {
   margin-left: 10px;
 }
+
+/* MENU LIST ORDER */
 
 .menu_list:nth-of-type(1) {
   grid-column: 1/2;
